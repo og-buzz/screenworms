@@ -92,7 +92,7 @@ namespace ScreenWorm
             ParticleCap = Math.Max(4096, particleCap); ParticleCount = ParticleCap; MoteCount = Math.Max(0, Math.Min(moteCount, ParticleCap >> 3));
             Info = GL.glGetString(GL.RENDERER) + " | OpenGL " + GL.glGetString(GL.VERSION);
             var range = new float[2]; GL.glGetFloatv(GL.POINT_SIZE_RANGE, range); if (range[1] > 0) maxPoint = range[1];
-            GL.glEnable(GL.PROGRAM_POINT_SIZE); GL.glEnable(GL.POINT_SPRITE); GL.glGetError();
+            GL.glEnable(GL.PROGRAM_POINT_SIZE); GL.glGetError();
             pBg = new GlProgram(Shaders.QuadVs, Shaders.BgFs, "bg", null);
             pStar = new GlProgram(Shaders.StarVs, Shaders.StarFs, "stars", null);
             pWorm = new GlProgram(Shaders.WormVs, Shaders.WormFs, "worm", null);

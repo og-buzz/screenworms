@@ -3,3 +3,7 @@ native/bin/
 *.png
 !docs/*.png
 .vs/
+linux/bin/
+linux/obj/
+linux/build/
+!linux/screenworm.png
